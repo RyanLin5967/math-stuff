@@ -1,0 +1,146 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+
+
+\setlength{\parindent}{24pt}
+
+\begin{document}
+
+\begin{enumerate}
+    \item (a) is equivalent to (i) because they are their contrapositives, and
+          equal to (g) and (f). (h) is the contrapositive of (b) so they are equal and
+          they are also equal to (e). By definition, (c) and (d) are
+          equivalent.
+
+    \item If x, y are both even integers $(P)$, then the sum is even $(Q)$. The converse
+          is if a number is even$(Q)$, then it must have been added by two even
+          integers$(P)$, but $\frac{3}{2} + \frac{1}{2} = 2$, which is even, so the
+          converse is false.
+
+    \item
+
+    \item They are not equivalent. Let $P(x,y)$ equal $x < y$. Notice that the statement
+          ``$\forall x \exists y$'' is always true since there is always a number less
+          than another, but the statement ``$\forall y \exists x$'' says all numbers are
+          less than $y$, which is false since there is no number less than all numbers.
+
+    \item
+          \begin{enumerate}
+              \item Since we are given that $x$ is an integer, then we can seperate the cases where
+                    $x$ is odd and even. \newline Case $x$ is odd:
+
+                    \begin{quote}
+                        By definition, we can represent $x$ as $2n + 1$ for some integer $n$.
+                        Substituting that into $x^2+5x$, we get:
+                        \begin{center}$x^2+5x = (2n+1)^2 + 5(2n+1)$ \end{center}
+                        and after simplifying and combining like terms we get:
+                        \begin{center}$4n^2 + 14n + 6$ \end{center}
+                        Letting $m = 2n^2 + 7n + 3$, we have:
+                        \begin{center}$2(2n^2+7n+3) = 2m$\end{center}
+                        which is even.
+                    \end{quote}
+                    Case $x$ is even:
+                    \begin{quote}
+                        By definition, we can represent $x$ as $2n$ for some integer $n$.
+                        Substituting into $x^2 + 5x$, we get
+                        \begin{center}
+                            $x^2+5x = (2n)^2 + 5(2n) = 4n^2 + 10n$
+                        \end{center}
+                        Letting $m = 2n^2 + 5n$, we have
+                        \begin{center}
+                            $2(2n^2+5n) = 2m$
+                        \end{center}
+                        which is also even.
+                    \end{quote}
+                    Therefore, for all integers, $x^2+5x$ is even. \hfill $\blacksquare$
+              \item By definition, we can represent an odd integer as $2n+1$ for some integer $n$.
+                    Substituting into $x^3-3x^2+5x+7$, we have
+                    \begin{center}
+                        $x^3-3x^2+5x+7 = (2n+1)^3-3(2n+1)^2+5(2n+1)+7$
+                    \end{center}
+                    and after expanding and collecting like terms, we get
+                    \begin{center}
+                        $8n^3 + 4n + 10$.
+                    \end{center}
+                    Letting $m = 4n^3 + 2n + 5$, we have
+                    \begin{center}
+                        $2(4n^3+2n+5) = 2m$,
+                    \end{center}
+                    which is even. Hence if x is odd, $x^3-3x^2+5x+7$ is even. \hfill $\blacksquare$
+              \item Note that the a statement and its contrapositive are equivalent so proving that
+                    the contrapositive is true will be sufficient. Since we are given that $x$ is
+                    an integer, the contrapositive of the statement is if $x$ is even, then
+                    $x^2+2x+3$ is odd. Letting $x = 2n$, we have
+                    \begin{center}
+                        $x^2+2x+3 = (2n)^2+2(2n) + 3 = 4n^2 + 4n + 3$.
+                    \end{center}
+                    Letting $m = 2n^2+2n+1$, we get
+                    \begin{center}
+                        $4n^2 + 4n + 3 = 2(2n^2+2n+1) + 1 = 2m + 1$,
+                    \end{center}
+                    which is odd. \hfill $\blacksquare$
+              \item Since $x$ is an integer, we can seperate the cases into when it's odd and even.
+                    \newline Case $x$ is even:
+                    \begin{quote}
+                        Let $x = 2m$ for some integer m (so $x$ is even by definition).
+                        Substituting into $n^2$, we have
+                        \begin{center}
+                            $n^2 = (2m)^2 = 4m^2$.
+                        \end{center}
+                        Let $k = m^2$. Then
+                        \begin{center}
+                            $4m^2 = 4k$,
+                        \end{center}
+                        which is divisible by $4$.
+                    \end{quote}
+                    Case $x$ is odd:
+                    \begin{quote}
+                        Let $x = 2m + 1$ for some integer m (so $x$ is odd by definition).
+                        Substituting into $n^2+1$, we get
+                        \begin{center}
+                            $n^2+1 = (2m+1)^2-1 = 4m^2 + 4m$
+                        \end{center}
+                        Let $k = m^2 + m$. Then
+                        $4m^2 + 4m = 4(m^2+m) = 4k$,
+                        Which is also divisible by 4.
+                    \end{quote}
+                    Therefore, for all integers, either $n^2$ or $n^2-1$ is a multiple
+                    of $4$. \hfill $\blacksquare$
+          \end{enumerate}
+    \item Since this is 4 consecutive numbers, then there will be at least 2 even
+          numbers, and one of them is a multiple of 4, and there will be one a factor of
+          3. This gives at minimum factors 2, 3, and 4. This means the largest $n$ such
+          that $x(x+1)(x+2)(x+3)$ is a multiple of n is $2 \times 3 \times 4 = 24$.
+          \hfill $\blacksquare$
+    \item First, assume that $\sqrt{3}$ is rational, so then it can be represented as a
+          fraction of two integers, $a$ and $b$: $\frac{a}{b}$, where $b$ is positive and
+          as small as possible. Now, square both sides to get
+          \begin{center}
+              $3 = \frac{a^2}{b^2}$,
+          \end{center}
+          and rearange to get
+          \begin{center}
+              $3b^2 = a^2$.
+          \end{center}
+          Now, notice that since the left side is a multiple of 3, then the right side
+          must be a multiple of 3 as well, so we can let $a = 3c$ for some integer $c$.
+          So now we have
+          \begin{center}
+              $3b^2 = (3c)^2 = 9c^2$,
+          \end{center}
+          and dividing both sides by 3 gives $b^2 = 3c^2$. Rearanging and taking the
+          square root of both sides gives
+          \begin{center}
+              $\sqrt{3} = \frac{b}{c}$
+          \end{center}
+          with $b>c>0$. This is a contradiction since we have just written $\sqrt{3}$
+          as a fraction with a denominator smaller than $b$. This means that our
+          initial assumption that $\sqrt{3}$ is rational must be false. Thus, $\sqrt{3}$
+          is irrational. \hfill $\blacksquare$\newline
+          Proof for $\sqrt[3]{4}$:
+          First, assume that $\sqrt[3]{4}$ is rational, so then it can be represented as a
+          fraction of two integers, $a$ and $b$: $\frac{a}{b}$, where $b$ is positive and 
+          as small as possible. Now, cube both sides to get
+\end{enumerate}
+\end{document}
