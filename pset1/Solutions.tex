@@ -9,7 +9,8 @@
 
 \begin{enumerate}
     \item (a) is equivalent to (i) because they are their contrapositives, and
-          equal to (g) and (f). (h) is the contrapositive of (b) so they are equal and
+          equal to (g) and (f) since they are the same thing but reworded.
+           (h) is the contrapositive of (b) so they are equal and
           they are also equal to (e). By definition, (c) and (d) are
           equivalent.
 
@@ -18,7 +19,8 @@
           integers$(P)$, but $\frac{3}{2} + \frac{1}{2} = 2$, which is even, so the
           converse is false.
 
-    \item
+    \item The converse is equivalent logically to the inverse because they are their
+    contrapositives, which are always logically equivalent.
 
     \item They are not equivalent. Let $P(x,y)$ equal $x < y$. Notice that the statement
           ``$\forall x \exists y$'' is always true since there is always a number less
@@ -141,6 +143,97 @@
           Proof for $\sqrt[3]{4}$:
           First, assume that $\sqrt[3]{4}$ is rational, so then it can be represented as a
           fraction of two integers, $a$ and $b$: $\frac{a}{b}$, where $b$ is positive and 
-          as small as possible. Now, cube both sides to get
+          as small as possible. Now, cube both sides to get $4 = \frac{a^3}{b^3}$, then 
+          multiply both sides by $b^3$ to get $4b^3 = a^3$. Since the left side is even, 
+          then the right side mut be as well, so we can let $a = 2c$ for some integer $c$:
+          $4b^3 = (2c)^3 = 8c^3$. Dividing both sides by 4 gives $b^3 = 2c^3$. Again, since 
+          the right side is even, the left must be as well, so we can let $b = 2d$ for some
+          integer $d$: $2c^3 = (2d)^3 = 8d^3$. Dividing both sides by 2 now gives $c^3 = 4d^3$.
+          After rearanging, we have 
+          \begin{center}
+            $\sqrt[3]{4} = \frac{c}{d}$,
+          \end{center}
+          Which contradicts our original assumption that $\sqrt[3]{4}$ was written with
+          it's denominator as small as possible. Hence, $\sqrt[3]{4}$ is irrational. \hfill $\blacksquare$
+          \newline
+          When trying to do the same thing for $\sqrt9$, during the substitution step,
+          you end up with something like $9b^2 = a^2$ and since 9 is a multiple of 3, 
+          we can substitute $a = 3c$ for some integer $c$ and get $9b^2 = 9c^2$, and 
+          dividing both sides by 9 gives $b^2 = c^2$, so no contradiction (obviously 
+          since $\sqrt9 = 3$, which is rational).
+          \item Let $j$ be an irrational number. First, we falsely assume that adding an 
+          irrational number, $j$, with a rational number, $\frac{a}{b}$, will result 
+          in a rational number, $\frac{c}{d}$, for some integers $a,b,c, $ and $d$ 
+          where $b, d \neq 0$. Then 
+          \begin{align*}
+            j + \frac{a}{b} &= \frac{c}{d}\\
+            j &= \frac{c}{d} - \frac{a}{b} 
+          \end{align*}
+            and finding a common denominator gives
+          \begin{align*}
+            j = \frac{cb-ad}{db}.
+          \end{align*}
+          Letting $p = cb-ad$ and $q = db$, we have
+          \begin{align*}
+            j = \frac{p}{q},
+          \end{align*}
+          Which is a contradiction to our assumption that $j$ is irrational, hence 
+          adding an irrational number with a rational one is irrational. \hfill $\blacksquare$\newline\newline
+          Next, consider irrational numbers $\sqrt2$ and $-\sqrt2$. Their sum is 
+          \begin{align*}
+            \sqrt2 + (-\sqrt2) = 0,
+          \end{align*}
+          which is rational, hence there are two rational numbers whose sum is 
+          rational. \hfill $\blacksquare$ 
+          \item First, we falsely assume that multiplying an 
+          irrational number, $j$, with a rational number, $\frac{a}{b}$, will result 
+          in a rational number, $\frac{c}{d}$, for some integers $a,b,c, $ and $d$ 
+          where $a,b,d \neq 0$. Then 
+          \begin{align*}
+            j \times \frac{a}{b} &= \frac{c}{d}.
+          \end{align*}
+          Multiplying both sides by $b$ and dividing by $a$ gives
+          \begin{align*}
+            j &= \frac{bc}{ad}.
+          \end{align*}
+          Letting $p = bc$ and $q = ad$ gives $j = \frac{p}{q}$, which contradicts 
+          our original assumption that j is irrational, hence, multiplying a rational 
+          number with an irrational one is irrational. \hfill $\blacksquare$
+
+          To prove there are two irrational whose product is rational we can multiply
+          $\sqrt2$ with itself:
+          \begin{align*}
+            \sqrt2 \times \sqrt2 = 2,
+          \end{align*}
+          which is rational, so there exists two irrational numbers whose product
+          is rational. \hfill $\blacksquare$
+          \item First, we falsly assume that $x$ can be represented as a fraction
+          of two integers, $a$ and $b$. Then 
+          \begin{align*}
+            2^\frac{a}{b} = 3,
+          \end{align*}
+          and raising both sides to the power of $b$ gives
+          \begin{align*}
+            (2^\frac{a}{b})^b &= (3)^b \\
+            2^a &= 3^b
+          \end{align*}
+          But notice that since 2 and 3 are coprime, there are no integers that 
+          will satisfy the equation $2^a = 3^b$, which contradicts our original 
+          assumption that there exists a fraction, $\frac{a}{b}$ that satisfies
+          $2^\frac{a}{b} = 3$. Thus, $\log_{2}3$ is irrational. \hfill $\blacksquare$
+          \item Let $x = \sqrt2^{\sqrt2}$ and let $y = \sqrt2$. Then 
+          \begin{align*}
+            x^y = 2,
+          \end{align*}
+          Which is rational, hence, there exists two numbers $x,y$, such that 
+          $x^y$ is rational. \hfill $\blacksquare$
+          \item Dividing $x^2 -3y^2 = 2$ by 3 and taking the remainder gives 
+          \begin{align*}
+            x^2 = 2 + 3k,
+          \end{align*}
+          for some integer $k$. But notice that $x^2$ can only return a value 
+          in the form $x^2 = 3m$ or $x^2 = 1 + 3n$ for some integers $m$ and $n$
+          when divided by 3. Thus, the equation $x^2-3y^2 = 2$ has no integer 
+          solutions.
 \end{enumerate}
 \end{document}
