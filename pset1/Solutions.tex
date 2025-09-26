@@ -8,232 +8,241 @@
 \begin{document}
 
 \begin{enumerate}
-    \item (a) is equivalent to (i) because they are their contrapositives, and
-          equal to (g) and (f) since they are the same thing but reworded.
-           (h) is the contrapositive of (b) so they are equal and
-          they are also equal to (e). By definition, (c) and (d) are
-          equivalent.
+    % Q1
+	\item (a) is equivalent to (i) because they are their contrapositives, and
+	      equal to (g), (f), and (c) since they are the same thing but reworded.
+	      (h) is the contrapositive of (b) so they are equal and
+	      they are also equal to (e) and (d) since it's just (b) but reworded.
+    % Q2
+	\item If x, y are both even integers $(P)$, then the sum is even $(Q)$. The converse
+	      is if a number is even$(Q)$, then it must have been added by two even
+	      integers$(P)$, but $1 + 3 = 4$, which is even, but the integers adding it 
+          are odd, so the converse is false.
+    % Q3
+	\item The converse is equivalent logically to the inverse because they are their
+	      contrapositives, which are always logically equivalent.
+    % Q4
+	\item They are not equivalent. Let $P(x,y)$ be $x < y$. Notice that the statement
+	      ``$\forall x \exists y$'' is always true since there is always a number less
+	      than another, but the statement ``$\forall y \exists x$'' says all numbers are
+	      less than $y$, which is false since there is no number less than all numbers.
+    % Q5
+	\item
+	      \begin{enumerate}
+		      \item Since we are given that $x$ is an integer, then we can seperate the cases where
+		            $x$ is odd and even. \newline Case $x$ is odd:
 
-    \item If x, y are both even integers $(P)$, then the sum is even $(Q)$. The converse
-          is if a number is even$(Q)$, then it must have been added by two even
-          integers$(P)$, but $\frac{3}{2} + \frac{1}{2} = 2$, which is even, so the
-          converse is false.
+		            \begin{quote}
+			            By definition, we can represent $x$ as $2n + 1$ for some integer $n$.
+			            Substituting that into $x^2+5x$, we get:
+			            \begin{center}$x^2+5x = (2n+1)^2 + 5(2n+1)$ \end{center}
+			            and after simplifying and combining like terms we get:
+			            \begin{center}$4n^2 + 14n + 6$ \end{center}
+			            Letting $m = 2n^2 + 7n + 3$, we have:
+			            \begin{center}$2(2n^2+7n+3) = 2m$\end{center}
+			            which is even.
+		            \end{quote}
+		            Case $x$ is even:
+		            \begin{quote}
+			            By definition, we can represent $x$ as $2n$ for some integer $n$.
+			            Substituting into $x^2 + 5x$, we get
+			            \begin{center}
+				            $x^2+5x = (2n)^2 + 5(2n) = 4n^2 + 10n$
+			            \end{center}
+			            Letting $m = 2n^2 + 5n$, we have
+			            \begin{center}
+				            $2(2n^2+5n) = 2m$
+			            \end{center}
+			            which is also even.
+		            \end{quote}
+		            Therefore, for all integers, $x^2+5x$ is even. \hfill $\blacksquare$
+		      \item By definition, we can represent an odd integer as $2n+1$ for some integer $n$.
+		            Substituting into $x^3-3x^2+5x+7$, we have
+		            \begin{center}
+			            $x^3-3x^2+5x+7 = (2n+1)^3-3(2n+1)^2+5(2n+1)+7$
+		            \end{center}
+		            and after expanding and collecting like terms, we get
+		            \begin{center}
+			            $8n^3 + 4n + 10$.
+		            \end{center}
+		            Letting $m = 4n^3 + 2n + 5$, we have
+		            \begin{center}
+			            $2(4n^3+2n+5) = 2m$,
+		            \end{center}
+		            which is even. Hence if x is odd, $x^3-3x^2+5x+7$ is even. \hfill $\blacksquare$
+		      \item Note that the a statement and its contrapositive are equivalent so proving that
+		            the contrapositive is true will be sufficient. Since we are given that $x$ is
+		            an integer, the contrapositive of the statement is if $x$ is even, then
+		            $x^2+2x+3$ is odd. Letting $x = 2n$, we have
+		            \begin{center}
+			            $x^2+2x+3 = (2n)^2+2(2n) + 3 = 4n^2 + 4n + 3$.
+		            \end{center}
+		            Letting $m = 2n^2+2n+1$, we get
+		            \begin{center}
+			            $4n^2 + 4n + 3 = 2(2n^2+2n+1) + 1 = 2m + 1$,
+		            \end{center}
+		            which is odd. \hfill $\blacksquare$
+		      \item Since $x$ is an integer, we can seperate the cases into when it's odd and even.
+		            \newline Case $x$ is even:
+		            \begin{quote}
+			            Let $x = 2m$ for some integer m (so $x$ is even by definition).
+			            Substituting into $n^2$, we have
+			            \begin{center}
+				            $n^2 = (2m)^2 = 4m^2$.
+			            \end{center}
+			            Let $k = m^2$. Then
+			            \begin{center}
+				            $4m^2 = 4k$,
+			            \end{center}
+			            which is divisible by $4$.
+		            \end{quote}
+		            Case $x$ is odd:
+		            \begin{quote}
+			            Let $x = 2m + 1$ for some integer m (so $x$ is odd by definition).
+			            Substituting into $n^2-1$, we get
+			            \begin{center}
+				            $n^2+1 = (2m+1)^2-1 = 4m^2 + 4m$
+			            \end{center}
+			            Let $k = m^2 + m$. Then
+			            $4m^2 + 4m = 4(m^2+m) = 4k$,
+			            Which is also divisible by 4.
+		            \end{quote}
+		            Therefore, for all integers, either $n^2$ or $n^2-1$ is a multiple
+		            of $4$. \hfill $\blacksquare$
+	      \end{enumerate}
+        % Q6
+	\item Since this is 4 consecutive numbers, then there will be at least 2 even
+	      numbers, and one of them is a multiple of 4, and there will be one a factor of
+	      3. This gives at minimum factors 2, 3, and 4. Also note that it can't "gain" a 
+          factor $\geq 5$ because it's only 4 consecutive numbers. This means the largest $n$ such
+	      that $x(x+1)(x+2)(x+3)$ is a multiple of n is $2 \times 3 \times 4 = 24$.
+	      \hfill $\blacksquare$
+        %  Q7
+	\item First, assume that $\sqrt{3}$ is rational, so then it can be represented as a
+	      fraction of two integers, $a$ and $b$: $\frac{a}{b}$, where $b$ is positive and
+	      as small as possible. Now, square both sides to get
+	      \begin{center}
+		      $3 = \frac{a^2}{b^2}$,
+	      \end{center}
+	      and rearange to get
+	      \begin{center}
+		      $3b^2 = a^2$.
+	      \end{center}
+	      Now, notice that since the left side is a multiple of 3, then the right side
+	      must be a multiple of 3 as well, so we can let $a = 3c$ for some integer $c$.
+	      So now we have
+	      \begin{center}
+		      $3b^2 = (3c)^2 = 9c^2$,
+	      \end{center}
+	      and dividing both sides by 3 gives $b^2 = 3c^2$. Rearanging and taking the
+	      square root of both sides gives
+	      \begin{center}
+		      $\sqrt{3} = \frac{b}{c}$
+	      \end{center}
+	      with $b>c>0$. This is a contradiction since we have just written $\sqrt{3}$
+	      as a fraction with a denominator smaller than $b$. This means that our
+	      initial assumption that $\sqrt{3}$ is rational must be false. Thus, $\sqrt{3}$
+	      is irrational. \hfill $\blacksquare$\newline
+	      Proof for $\sqrt[3]{4}$:
+	      First, assume that $\sqrt[3]{4}$ is rational, so then it can be represented as a
+	      fraction of two integers, $a$ and $b$: $\frac{a}{b}$, where $b$ is positive and
+	      as small as possible. Now, cube both sides to get $4 = \frac{a^3}{b^3}$, then
+	      multiply both sides by $b^3$ to get $4b^3 = a^3$. Since the left side is even,
+	      then the right side mut be as well, so we can let $a = 2c$ for some integer $c$:
+	      $4b^3 = (2c)^3 = 8c^3$. Dividing both sides by 4 gives $b^3 = 2c^3$. Again, since
+	      the right side is even, the left must be as well, so we can let $b = 2d$ for some
+	      integer $d$: $2c^3 = (2d)^3 = 8d^3$. Dividing both sides by 2 now gives $c^3 = 4d^3$.
+	      After rearanging, we have
+	      \begin{center}
+		      $\sqrt[3]{4} = \frac{c}{d}$,
+	      \end{center}
+	      Which contradicts our original assumption that $\sqrt[3]{4}$ was written with
+	      it's denominator as small as possible. Hence, $\sqrt[3]{4}$ is irrational. \hfill $\blacksquare$
+	      \newline
+	      When trying to do the same thing for $\sqrt9$, during the substitution step,
+	      you end up with something like $9b^2 = a^2$ and since 9 is a multiple of 3,
+	      we can substitute $a = 3c$ for some integer $c$ and get $9b^2 = 9c^2$, and
+	      dividing both sides by 9 gives $b^2 = c^2$, so no contradiction (obviously
+	      since $\sqrt9 = 3$, which is rational).
+        %  Q8
+	\item Let $j$ be an irrational number. First, we falsely assume that adding an
+	      irrational number, $j$, with a rational number, $\frac{a}{b}$, will result
+	      in a rational number, $\frac{c}{d}$, for some integers $a,b,c, $ and $d$
+	      where $b, d \neq 0$. Then
+	      \begin{align*}
+		      j + \frac{a}{b} & = \frac{c}{d}               \\
+		      j               & = \frac{c}{d} - \frac{a}{b}
+	      \end{align*}
+	      and finding a common denominator gives
+	      \begin{align*}
+		      j = \frac{cb-ad}{db}.
+	      \end{align*}
+	      Letting $p = cb-ad$ and $q = db$, we have
+	      \begin{align*}
+		      j = \frac{p}{q},
+	      \end{align*}
+	      Which is a contradiction to our assumption that $j$ is irrational, hence
+	      adding an irrational number with a rational one is irrational. \hfill $\blacksquare$\newline\newline
+	      Next, consider irrational numbers $\sqrt2$ and $-\sqrt2$. Their sum is
+	      \begin{align*}
+		      \sqrt2 + (-\sqrt2) = 0,
+	      \end{align*}
+	      which is rational, hence there are two irrational numbers whose sum is
+	      rational. \hfill $\blacksquare$
+        %   Q9
+	\item First, we falsely assume that multiplying an
+	      irrational number, $j$, with a rational number, $\frac{a}{b}$, will result
+	      in a rational number, $\frac{c}{d}$, for some integers $a,b,c, $ and $d$
+	      where $a,b,d \neq 0$. Then
+	      \begin{align*}
+		      j \times \frac{a}{b} & = \frac{c}{d}.
+	      \end{align*}
+	      Multiplying both sides by $b$ and dividing by $a$ gives
+	      \begin{align*}
+		      j & = \frac{bc}{ad}.
+	      \end{align*}
+	      Letting $p = bc$ and $q = ad$ gives $j = \frac{p}{q}$, which contradicts
+	      our original assumption that j is irrational, hence, multiplying a rational
+	      number with an irrational one is irrational. \hfill $\blacksquare$
 
-    \item The converse is equivalent logically to the inverse because they are their
-    contrapositives, which are always logically equivalent.
-
-    \item They are not equivalent. Let $P(x,y)$ equal $x < y$. Notice that the statement
-          ``$\forall x \exists y$'' is always true since there is always a number less
-          than another, but the statement ``$\forall y \exists x$'' says all numbers are
-          less than $y$, which is false since there is no number less than all numbers.
-
-    \item
-          \begin{enumerate}
-              \item Since we are given that $x$ is an integer, then we can seperate the cases where
-                    $x$ is odd and even. \newline Case $x$ is odd:
-
-                    \begin{quote}
-                        By definition, we can represent $x$ as $2n + 1$ for some integer $n$.
-                        Substituting that into $x^2+5x$, we get:
-                        \begin{center}$x^2+5x = (2n+1)^2 + 5(2n+1)$ \end{center}
-                        and after simplifying and combining like terms we get:
-                        \begin{center}$4n^2 + 14n + 6$ \end{center}
-                        Letting $m = 2n^2 + 7n + 3$, we have:
-                        \begin{center}$2(2n^2+7n+3) = 2m$\end{center}
-                        which is even.
-                    \end{quote}
-                    Case $x$ is even:
-                    \begin{quote}
-                        By definition, we can represent $x$ as $2n$ for some integer $n$.
-                        Substituting into $x^2 + 5x$, we get
-                        \begin{center}
-                            $x^2+5x = (2n)^2 + 5(2n) = 4n^2 + 10n$
-                        \end{center}
-                        Letting $m = 2n^2 + 5n$, we have
-                        \begin{center}
-                            $2(2n^2+5n) = 2m$
-                        \end{center}
-                        which is also even.
-                    \end{quote}
-                    Therefore, for all integers, $x^2+5x$ is even. \hfill $\blacksquare$
-              \item By definition, we can represent an odd integer as $2n+1$ for some integer $n$.
-                    Substituting into $x^3-3x^2+5x+7$, we have
-                    \begin{center}
-                        $x^3-3x^2+5x+7 = (2n+1)^3-3(2n+1)^2+5(2n+1)+7$
-                    \end{center}
-                    and after expanding and collecting like terms, we get
-                    \begin{center}
-                        $8n^3 + 4n + 10$.
-                    \end{center}
-                    Letting $m = 4n^3 + 2n + 5$, we have
-                    \begin{center}
-                        $2(4n^3+2n+5) = 2m$,
-                    \end{center}
-                    which is even. Hence if x is odd, $x^3-3x^2+5x+7$ is even. \hfill $\blacksquare$
-              \item Note that the a statement and its contrapositive are equivalent so proving that
-                    the contrapositive is true will be sufficient. Since we are given that $x$ is
-                    an integer, the contrapositive of the statement is if $x$ is even, then
-                    $x^2+2x+3$ is odd. Letting $x = 2n$, we have
-                    \begin{center}
-                        $x^2+2x+3 = (2n)^2+2(2n) + 3 = 4n^2 + 4n + 3$.
-                    \end{center}
-                    Letting $m = 2n^2+2n+1$, we get
-                    \begin{center}
-                        $4n^2 + 4n + 3 = 2(2n^2+2n+1) + 1 = 2m + 1$,
-                    \end{center}
-                    which is odd. \hfill $\blacksquare$
-              \item Since $x$ is an integer, we can seperate the cases into when it's odd and even.
-                    \newline Case $x$ is even:
-                    \begin{quote}
-                        Let $x = 2m$ for some integer m (so $x$ is even by definition).
-                        Substituting into $n^2$, we have
-                        \begin{center}
-                            $n^2 = (2m)^2 = 4m^2$.
-                        \end{center}
-                        Let $k = m^2$. Then
-                        \begin{center}
-                            $4m^2 = 4k$,
-                        \end{center}
-                        which is divisible by $4$.
-                    \end{quote}
-                    Case $x$ is odd:
-                    \begin{quote}
-                        Let $x = 2m + 1$ for some integer m (so $x$ is odd by definition).
-                        Substituting into $n^2+1$, we get
-                        \begin{center}
-                            $n^2+1 = (2m+1)^2-1 = 4m^2 + 4m$
-                        \end{center}
-                        Let $k = m^2 + m$. Then
-                        $4m^2 + 4m = 4(m^2+m) = 4k$,
-                        Which is also divisible by 4.
-                    \end{quote}
-                    Therefore, for all integers, either $n^2$ or $n^2-1$ is a multiple
-                    of $4$. \hfill $\blacksquare$
-          \end{enumerate}
-    \item Since this is 4 consecutive numbers, then there will be at least 2 even
-          numbers, and one of them is a multiple of 4, and there will be one a factor of
-          3. This gives at minimum factors 2, 3, and 4. This means the largest $n$ such
-          that $x(x+1)(x+2)(x+3)$ is a multiple of n is $2 \times 3 \times 4 = 24$.
-          \hfill $\blacksquare$
-    \item First, assume that $\sqrt{3}$ is rational, so then it can be represented as a
-          fraction of two integers, $a$ and $b$: $\frac{a}{b}$, where $b$ is positive and
-          as small as possible. Now, square both sides to get
-          \begin{center}
-              $3 = \frac{a^2}{b^2}$,
-          \end{center}
-          and rearange to get
-          \begin{center}
-              $3b^2 = a^2$.
-          \end{center}
-          Now, notice that since the left side is a multiple of 3, then the right side
-          must be a multiple of 3 as well, so we can let $a = 3c$ for some integer $c$.
-          So now we have
-          \begin{center}
-              $3b^2 = (3c)^2 = 9c^2$,
-          \end{center}
-          and dividing both sides by 3 gives $b^2 = 3c^2$. Rearanging and taking the
-          square root of both sides gives
-          \begin{center}
-              $\sqrt{3} = \frac{b}{c}$
-          \end{center}
-          with $b>c>0$. This is a contradiction since we have just written $\sqrt{3}$
-          as a fraction with a denominator smaller than $b$. This means that our
-          initial assumption that $\sqrt{3}$ is rational must be false. Thus, $\sqrt{3}$
-          is irrational. \hfill $\blacksquare$\newline
-          Proof for $\sqrt[3]{4}$:
-          First, assume that $\sqrt[3]{4}$ is rational, so then it can be represented as a
-          fraction of two integers, $a$ and $b$: $\frac{a}{b}$, where $b$ is positive and 
-          as small as possible. Now, cube both sides to get $4 = \frac{a^3}{b^3}$, then 
-          multiply both sides by $b^3$ to get $4b^3 = a^3$. Since the left side is even, 
-          then the right side mut be as well, so we can let $a = 2c$ for some integer $c$:
-          $4b^3 = (2c)^3 = 8c^3$. Dividing both sides by 4 gives $b^3 = 2c^3$. Again, since 
-          the right side is even, the left must be as well, so we can let $b = 2d$ for some
-          integer $d$: $2c^3 = (2d)^3 = 8d^3$. Dividing both sides by 2 now gives $c^3 = 4d^3$.
-          After rearanging, we have 
-          \begin{center}
-            $\sqrt[3]{4} = \frac{c}{d}$,
-          \end{center}
-          Which contradicts our original assumption that $\sqrt[3]{4}$ was written with
-          it's denominator as small as possible. Hence, $\sqrt[3]{4}$ is irrational. \hfill $\blacksquare$
-          \newline
-          When trying to do the same thing for $\sqrt9$, during the substitution step,
-          you end up with something like $9b^2 = a^2$ and since 9 is a multiple of 3, 
-          we can substitute $a = 3c$ for some integer $c$ and get $9b^2 = 9c^2$, and 
-          dividing both sides by 9 gives $b^2 = c^2$, so no contradiction (obviously 
-          since $\sqrt9 = 3$, which is rational).
-          \item Let $j$ be an irrational number. First, we falsely assume that adding an 
-          irrational number, $j$, with a rational number, $\frac{a}{b}$, will result 
-          in a rational number, $\frac{c}{d}$, for some integers $a,b,c, $ and $d$ 
-          where $b, d \neq 0$. Then 
-          \begin{align*}
-            j + \frac{a}{b} &= \frac{c}{d}\\
-            j &= \frac{c}{d} - \frac{a}{b} 
-          \end{align*}
-            and finding a common denominator gives
-          \begin{align*}
-            j = \frac{cb-ad}{db}.
-          \end{align*}
-          Letting $p = cb-ad$ and $q = db$, we have
-          \begin{align*}
-            j = \frac{p}{q},
-          \end{align*}
-          Which is a contradiction to our assumption that $j$ is irrational, hence 
-          adding an irrational number with a rational one is irrational. \hfill $\blacksquare$\newline\newline
-          Next, consider irrational numbers $\sqrt2$ and $-\sqrt2$. Their sum is 
-          \begin{align*}
-            \sqrt2 + (-\sqrt2) = 0,
-          \end{align*}
-          which is rational, hence there are two rational numbers whose sum is 
-          rational. \hfill $\blacksquare$ 
-          \item First, we falsely assume that multiplying an 
-          irrational number, $j$, with a rational number, $\frac{a}{b}$, will result 
-          in a rational number, $\frac{c}{d}$, for some integers $a,b,c, $ and $d$ 
-          where $a,b,d \neq 0$. Then 
-          \begin{align*}
-            j \times \frac{a}{b} &= \frac{c}{d}.
-          \end{align*}
-          Multiplying both sides by $b$ and dividing by $a$ gives
-          \begin{align*}
-            j &= \frac{bc}{ad}.
-          \end{align*}
-          Letting $p = bc$ and $q = ad$ gives $j = \frac{p}{q}$, which contradicts 
-          our original assumption that j is irrational, hence, multiplying a rational 
-          number with an irrational one is irrational. \hfill $\blacksquare$
-
-          To prove there are two irrational whose product is rational we can multiply
-          $\sqrt2$ with itself:
-          \begin{align*}
-            \sqrt2 \times \sqrt2 = 2,
-          \end{align*}
-          which is rational, so there exists two irrational numbers whose product
-          is rational. \hfill $\blacksquare$
-          \item First, we falsly assume that $x$ can be represented as a fraction
-          of two integers, $a$ and $b$. Then 
-          \begin{align*}
-            2^\frac{a}{b} = 3,
-          \end{align*}
-          and raising both sides to the power of $b$ gives
-          \begin{align*}
-            (2^\frac{a}{b})^b &= (3)^b \\
-            2^a &= 3^b
-          \end{align*}
-          But notice that since 2 and 3 are coprime, there are no integers that 
-          will satisfy the equation $2^a = 3^b$, which contradicts our original 
-          assumption that there exists a fraction, $\frac{a}{b}$ that satisfies
-          $2^\frac{a}{b} = 3$. Thus, $\log_{2}3$ is irrational. \hfill $\blacksquare$
-          \item Let $x = \sqrt2^{\sqrt2}$ and let $y = \sqrt2$. Then 
-          \begin{align*}
-            x^y = 2,
-          \end{align*}
-          Which is rational, hence, there exists two numbers $x,y$, such that 
-          $x^y$ is rational. \hfill $\blacksquare$
-          \item Dividing $x^2 -3y^2 = 2$ by 3 and taking the remainder gives 
-          \begin{align*}
-            x^2 = 2 + 3k,
-          \end{align*}
-          for some integer $k$. But notice that $x^2$ can only return a value 
-          in the form $x^2 = 3m$ or $x^2 = 1 + 3n$ for some integers $m$ and $n$
-          when divided by 3. Thus, the equation $x^2-3y^2 = 2$ has no integer 
-          solutions.
+	      To prove there are two irrational whose product is rational we can multiply
+	      $\sqrt2$ with itself:
+	      \begin{align*}
+		      \sqrt2 \times \sqrt2 = 2,
+	      \end{align*}
+	      which is rational, so there exists two irrational numbers whose product
+	      is rational. \hfill $\blacksquare$
+        %  Q10
+	\item First, we falsly assume that $x$ can be represented as a fraction
+	      of two integers, $a$ and $b$. Then
+	      \begin{align*}
+		      2^\frac{a}{b} = 3,
+	      \end{align*}
+	      and raising both sides to the power of $b$ gives
+	      \begin{align*}
+		      (2^\frac{a}{b})^b & = (3)^b \\
+		      2^a               & = 3^b
+	      \end{align*}
+	      But notice that since 2 and 3 are coprime, there are no integers that
+	      will satisfy the equation $2^a = 3^b$, which contradicts our original
+	      assumption that there exists a fraction, $\frac{a}{b}$ that satisfies
+	      $2^\frac{a}{b} = 3$. Thus, $\log_{2}3$ is irrational. \hfill $\blacksquare$
+        %   Q11
+	\item First note that $\sqrt2^{\sqrt2}$ is irrational by the Gelfond-Scheider 
+          Theorem. Let $x = \sqrt2^{\sqrt2}$ and let $y = \sqrt2$. Then
+	      \begin{align*}
+			  (\sqrt{2}^{\sqrt{2}})^{(\sqrt{2})} = x^y = 2,
+	      \end{align*}
+	      Which is rational, hence, there exists two irrational numbers $x,y$, such that
+	      $x^y$ is rational. \hfill $\blacksquare$
+        %  Q12
+	\item Dividing $x^2 -3y^2 = 2$ by 3 and taking the remainder gives
+	      \begin{align*}
+		      x^2 = 2 + 3k,
+	      \end{align*}
+	      for some integer $k$. But notice that $x^2$ can only return a value
+	      in the form $x^2 = 3m$ or $x^2 = 1 + 3n$ for some integers $m$ and $n$
+	      when divided by 3. Thus, the equation $x^2-3y^2 = 2$ has no integer
+	      solutions. \hfill $\blacksquare$
 \end{enumerate}
 \end{document}
