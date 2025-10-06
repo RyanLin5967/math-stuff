@@ -107,7 +107,7 @@
         &= F_{n+2},
     \end{align*}
     which proves the formula.
-    % Q1
+    % Q7
 \item We prove by strong induction on $n \ge 1$ that every $n$ can be written as
 \[
 n = a_1\cdot 1! + a_2\cdot 2! + a_3\cdot 3! + \cdots + a_k\cdot k!, \qquad 0 \le a_i \le i.
@@ -138,7 +138,7 @@ with $0 \le a_i \le i$ for all $i$.
 
 So, by induction, every positive integer $n$ can be written in this form.
 
-% Q2
+% Q8
 \item For each $n\ge 0$, let $T_n$ be the number whose decimal form has $3^n$ ones.
 We show by induction on $n$ that $3^n$ divides $T_n$.
 A number with $3^n$ equal digits $d$ is $d\cdot T_n$, so this will prove the claim for any digit $d$.
@@ -156,7 +156,7 @@ Since $3^n$ divides $T_n$ and $3$ divides $\bigl(1+10^{m}+10^{2m}\bigr)$, we get
 $3^{n+1}$ divides $T_{n+1}$. 
 Therefore by induction, any number with $3^n$ equal digits is divisible by $3^n$.
 
-% Q3
+% Q9
 \item We prove by induction that for every $n\ge 1$ there is an $n$-digit number,
 all of whose digits are odd, that is divisible by $5^n$.
 
@@ -181,7 +181,7 @@ N_{k+1}=t\cdot 10^k+N_k=t\cdot 2^k\cdot 5^k+5^k r=5^k(2^k t+r).
 So, $5$ divides $(2^k t+r)$, so $5^{k+1}$ divides $N_{k+1}$.
 Also, $N_{k+1}$ has $k+1$ digits and all are odd. Hence proven.
 
-% Q4
+% Q10
 \item First we will show that it's true for the base cases, $n =1,2$.\\
 Base cases: 
 
@@ -201,7 +201,7 @@ Therefore none of the terms used for $m$ is a neighbor of $F_k$,
 and so $n=F_k+m$ is a sum with no two consecutive terms by induction.
 
 
-% Q5
+% Q11
 \item 
 \[
 \begin{aligned}
@@ -238,7 +238,7 @@ A(5,n+1)=2^{\,2^{\,\cdot^{\,\cdot^{\,2^{\,x+3}}}}}-3,
 which is, a power tower of twos whose height is $x+3$, then subtract $3$.
 
 
-% Q6
+% Q12
 \item I couldn't really make much progress with this problem.
 
 \begin{enumerate}
