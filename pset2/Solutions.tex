@@ -4,34 +4,272 @@
 \begin{document}
 \begin{enumerate}
     % Q1
-    \item  
+    \item The mistake is that you assume there is ``overlap'' between
+    the two sets mentioned, $H_1, \ldots ,H_{n+1}$ and $H_2, \ldots ,H_(n+1)$. 
+    When $n = 1$, the two sets are just $H_1$ and $H_2$, meaning there is no overlap
+    between the two sets, hence the argument is completely false after the assumption
+    that there is overlap since we cannot go from $n = 1$ to $n = 2$.
     % Q2
-    \item 
+    \item First, we claim that the sum of the first $n$ odd number is $n^2$. The
+    base case is $n = 1$, and using $n^2$ gives $1^2 = 1$, so the base case is true.
+    Next, we assume that it is true for $n$, so we need to prove it's true for 
+    $n+1$. Since it's true for $n$, we have: 
+    \begin{align*}
+        1 + 3 + 5 + \cdots + (2n-1) + (2n+1) = n^2 + (2n+1).
+    \end{align*}
+    Completing the square on the right side gives \begin{align*}
+        n^2 + (2n+1) = (n+1)^2,
+    \end{align*}
+    so by induction, the sum of the first $n$ odd numbers is $n^2$.
     % Q3
-    \item 
+    \item First, we try the base case, $n = 1$. So we have \begin{align*}
+        \frac{1^{2}(1+1)^{2}}{4} = \frac{4}{4} = 1,
+    \end{align*}
+    so the formula holds true for $n = 1$. Next, we assume that it is true
+    for $n$, so we need to prove it's true for $n+1$. Since it's true for $n$, 
+    we have: \begin{align*}
+        1^3 + 2^3 +\cdots+n^3+(n+1)^3 = \frac{n^2(n+1)^2}{4} + (n+1)^3.
+    \end{align*}
+    Simplifying the right side gives \begin{align*}
+        \frac{n^2(n+1)^2}{4} + (n+1)^3 = (n+1)^2(\frac{n^2+4n+4}{4}) = \frac{(n+1)^2(n+2)^2}{4},
+    \end{align*}
+    which is what we get if $n+1$ was plugged into the original equation, hence, by 
+    induction, the sum of the first $n$ cubes is $\frac{n^2(n+1)^2}{4}$. Using 
+    sigma notation, we can rewrite this sum as $\sum_{i=1}^{n} i^3 = \frac{n^2(n+1)^2}{4}$.
     % Q4
-    \item  
+    \item To prove this, we can consider cases when $n$ is in the forms $5k, 5k+1, 
+    5k +2, 5k+3,$ and $5k+4$, for some integer $k$, and we will use $n^5-n = n(n+1)(n-1)(n^2+1)$ to show that:
+    \begin{align*}
+        \text{Case } n &= 5k\text{: } \\ &=5k(5k+1)(5k-1)((5k)^2+1) \text{, which is divisible by 5} \\
+        \text{Case } n &= 5k+1\text{: } \\ &=(5k+1)(5k+2)(5k)((5k+1)^2+1) \\
+        &= 5(5k+1)(5k+2)(k)((5k+1)^2+1)\text{, which is divisible by 5}\\
+        \text{Case } n &= 5k+2\text{: } \\ &=(5k+2)(5k+3)(5k+1)((5k+2)^2+1) \\
+        &= 5(5k+2)(5k+3)(5k+1)(5k^2+4k+1)\text{, which is divisible by 5}\\
+        \text{Case } n &= 5k+3\text{: } \\ &=(5k+3)(5k+4)(5k+2)((5k+3)^2+1) \\
+        &= 5(5k+3)(5k+4)(5k+2)(5k^2+6k+2)\text{, which is divisible by 5}\\
+        \text{Case } n &= 5k+4\text{: } \\ &=(5k+4)(5k+5)(5k+3)((5k+4)^2+1) \\
+        &= 5(5k+4)(k+1)(5k+3)((5k+4)^2+1)\text{, which is divisible by 5}
+    \end{align*}
+    So, for all nonnegative integers, $n$ , $5$ divides into $n^5-n$. If $n$ is negative, 
+    then you can factor out a negative from $n^5-n$:
+    \begin{align*}
+        (-n)^5-(-n) = -(n^5-n),
+    \end{align*}
+    and the cases we used previously would also hold true since it would just have 
+    a negative sign in front. So for all negative integers, $5$ also divides into $
+    n^5 - n$.
     % Q5
-    \item 
+    \item The base case is $n = 0$, which gives \begin{align*}
+        (1+x)^0 &\geq 1+(0)x \\
+        1 &\geq 1,
+    \end{align*}
+    which is always true, so it holds for the base case. Assuming it is true for $n$,
+    we need to show it is true for $n+1$, so:
+    \begin{align*}
+        (1+x)^{n+1} &\geq 1+(n+1)x\\
+        (1+x)^n(1+x) &\geq (1+nx) + x,
+    \end{align*}
+        but since already assumed it is true for $n$, we are left with 
+    \begin{align*}
+        1+x \geq x,
+    \end{align*}
+    which is always true, so by induction, for $x > -1$, $(1+x)^n \geq 1 + nx$.
     % Q6
-    \item 
-    % Q7
-    \item  
-    % Q8
-    \item  
-    % Q9
-    \item  
-    % Q10
-    \item 
-    % Q11
-    \item 
-    % Q12
-    \item
-        \begin{enumerate}
-        \item 
-        \item 
-        \item  
-        \item 
-        \end{enumerate}
+    \item First, we try the base cases, $n = 0$ and $n = 1$:
+    \begin{align*}
+        F_0 &= \frac{1}{\sqrt{5}} \left( \left( \frac{1 + \sqrt{5}}{2} \right)^0 - \left( \frac{1 - \sqrt{5}}{2} \right)^0 \right) = 0\\
+        F_1 &= \frac{1}{\sqrt{5}} \left( \left( \frac{1 + \sqrt{5}}{2} \right)^1 - \left( \frac{1 - \sqrt{5}}{2} \right)^1 \right) = 1,
+    \end{align*}
+    so the formula is true for $n=0,1$. Now, we assume that it's true for $n$, and 
+    so we need to show that it satisfies $F_{n+2} = F_n + F_{n+1}$. First, we add 
+    $F_n$ and $F_{n+1}$:
+    \begin{align*}
+        F_n + F_{n+1}
+        &= \frac{1}{\sqrt{5}}\Bigg(
+        \left(\frac{1+\sqrt{5}}{2}\right)^n - \left(\frac{1-\sqrt{5}}{2}\right)^n
+        + \left(\frac{1+\sqrt{5}}{2}\right)^{n+1} - \left(\frac{1-\sqrt{5}}{2}\right)^{n+1}
+        \Bigg)\\
+        &= \frac{1}{\sqrt{5}}\Bigg(
+        \left(\frac{1+\sqrt{5}}{2}\right)^n\!\Big(1+\frac{1+\sqrt{5}}{2}\Big)
+        - \left(\frac{1-\sqrt{5}}{2}\right)^n\!\Big(1+\frac{1-\sqrt{5}}{2}\Big)
+        \Bigg)\\
+    \end{align*}
+    But notice that $1 + \frac{1 \pm \sqrt{5}}{2}
+    = \frac{2 + 1 \pm \sqrt{5}}{2}
+    = \frac{3 \pm \sqrt{5}}{2}
+    = \left( \frac{1 \pm \sqrt{5}}{2} \right)^2$, so 
+    we can simplify the remaining terms to:
+    \begin{align*}
+        &= \frac{1}{\sqrt{5}}\Bigg(
+        \left(\frac{1+\sqrt{5}}{2}\right)^{n+2}
+        - \left(\frac{1-\sqrt{5}}{2}\right)^{n+2}
+        \Bigg)\\
+        &= F_{n+2},
+    \end{align*}
+    which proves the formula.
+    % Q1
+\item We prove by strong induction on $n \ge 1$ that every $n$ can be written as
+\[
+n = a_1\cdot 1! + a_2\cdot 2! + a_3\cdot 3! + \cdots + a_k\cdot k!, \qquad 0 \le a_i \le i.
+\]
+
+Base case $n=1$: we have $1 = 1\cdot 1!$, so the statement is true for $n=1$.
+
+For the induction step, assume the statement is true for all positive integers smaller than $n$.
+Let $k$ be the largest integer such that $k! \le n$.  
+Now divide $n$ by $k!$:
+\[
+n = q \cdot k! + r, \qquad 0 \le r < k!.
+\]
+Since $(k+1)! = (k+1)\cdot k! > n$, we know $q \le k$.  
+We can then set $a_k = q$.  
+
+The remainder $r$ is smaller than $n$, so by the induction hypothesis we can write
+\[
+r = a_1\cdot 1! + a_2\cdot 2! + \cdots + a_{k-1}\cdot (k-1)!,
+\]
+where each $a_i$ satisfies $0 \le a_i \le i$.  
+
+Adding this to $a_k \cdot k!$ gives
+\[
+n = a_1\cdot 1! + a_2\cdot 2! + \cdots + a_k\cdot k!,
+\]
+with $0 \le a_i \le i$ for all $i$.  
+
+So, by induction, every positive integer $n$ can be written in this form.
+
+% Q2
+\item For each $n\ge 0$, let $T_n$ be the number whose decimal form has $3^n$ ones.
+We show by induction on $n$ that $3^n$ divides $T_n$.
+A number with $3^n$ equal digits $d$ is $d\cdot T_n$, so this will prove the claim for any digit $d$.
+
+Base cases: $T_0=1$ is divisible by $1$. Also $T_1=111=3\cdot 37$ is divisible by $3$.
+
+Inductive step: suppose $3^n$ divides $T_n$.
+Let $m=3^n$. The decimal for $T_{n+1}$ is three blocks of $m$ ones in a row, so
+\[
+T_{n+1}=T_n+10^{m}T_n+10^{2m}T_n=T_n\bigl(1+10^{m}+10^{2m}\bigr).
+\]
+When dividing by $3$, the remainder of $10$ is $1$, so the remainder of $10^{m}$ is also $1$.
+Therefore $1+10^{m}+10^{2m}$ leaves remainder $1+1+1=3$, so it is divisible by $3$.
+Since $3^n$ divides $T_n$ and $3$ divides $\bigl(1+10^{m}+10^{2m}\bigr)$, we get
+$3^{n+1}$ divides $T_{n+1}$. 
+Therefore by induction, any number with $3^n$ equal digits is divisible by $3^n$.
+
+% Q3
+\item We prove by induction that for every $n\ge 1$ there is an $n$-digit number,
+all of whose digits are odd, that is divisible by $5^n$.
+
+Base case $n=1$: the number $5$ works.
+
+Inductive step: assume there is a $k$-digit number $N_k$ with all digits odd and $5^k$ divides $N_k$.
+Write $N_k=5^k r$ for some integer $r$. We will choose an odd digit $t\in\{1,3,5,7,9\}$
+so that, when dividing $2^k t + r$ by $5$, the remainder is $0$.
+
+Note that when dividing by $5$, the possible remainders are $0,1,2,3,4$.
+The digits $1,3,5,7,9$ leave remainders $1,3,0,2,4$ respectively, which are all different.
+Multiplying each by $2^k$ and then dividing by $5$ again gives five remainders; they are still all different
+(because if two of them were equal, then $5$ would divide $2^k(t_1-t_2)$, which would have to make $5$ dividing into $t_1-t_2$,
+impossible for distinct $t_1,t_2\in\{1,3,5,7,9\}$). Hence these five values cover all five possible remainders.
+Therefore we can choose $t$ so that $2^k t$ and $-r$ have the same remainder upon division by $5$,
+which makes $2^k t + r$ divisible by $5$.
+
+Now set
+\[
+N_{k+1}=t\cdot 10^k+N_k=t\cdot 2^k\cdot 5^k+5^k r=5^k(2^k t+r).
+\]
+So, $5$ divides $(2^k t+r)$, so $5^{k+1}$ divides $N_{k+1}$.
+Also, $N_{k+1}$ has $k+1$ digits and all are odd. Hence proven.
+
+% Q4
+\item First we will show that it's true for the base cases, $n =1,2$.\\
+Base cases: 
+
+Case $n = 1$: we have $1 = F_2$, which is already a single Fibonacci number, so it works.
+
+Case $n = 2$ we can write $2 = F_3$, and since there is only one term, there are no consecutive Fibonacci numbers used. Thus, the statement is true for $n = 1$ and $n = 2$.
+
+Inductive step: assume the claim is true for all positive integers less than $n$.
+Let $F_k$ be the largest Fibonacci number with $F_k\le n$.
+If $n=F_k$, we are done.
+Otherwise write $n=F_k+m$ with $m=n-F_k$.
+Since $n<F_{k+1}=F_k+F_{k-1}$, we have $0<m<F_{k-1}$.
+By the induction hypothesis, $m$ can be written as a sum of Fibonacci numbers,
+all less than $F_{k-1}$, so none of them is $F_{k-1}$.
+Also, because $F_{k-2}$ is next to $F_k$ in the list, $m$ cannot use $F_{k-2}$ either.
+Therefore none of the terms used for $m$ is a neighbor of $F_k$,
+and so $n=F_k+m$ is a sum with no two consecutive terms by induction.
+
+
+% Q5
+\item 
+\[
+\begin{aligned}
+A(0,n)&=n+1.\\[4pt]
+A(1,0)&=A(0,1)=2,\qquad A(1,n+1)=A(0,A(1,n))=A(1,n)+1\\
+&\Rightarrow\ A(1,n)=n+2.\\[4pt]
+A(2,0)&=A(1,1)=3,\qquad A(2, n+1)=A(1, A(2,n))=A(2,n)+2\\
+&\Rightarrow\ A(2,n)=2n+3.\\[4pt]
+A(3,0)&=A(2,1)=5,\qquad A(3,n+1)=A(2,A(3,n))=2A(3,n)+3.
+\end{aligned}
+\]
+Solving $T_{n+1}=2T_n+3$ with $T_0=5$ gives $A(3,n)=2^{\,n+3}-3$.
+
+For $m=4$,
+\[
+A(4,0)=A(3,1)=13,\qquad A(4,n+1)=A\bigl(3,\,A(4,n)\bigr)=2^{\,A(4,n)+3}-3.
+\]
+Thus
+\[
+A(4,1)=2^{\,16}-3,\qquad
+A(4,2)=2^{\,2^{\,16}-3}-3,\qquad
+A(4,3)=2^{\,2^{\,2^{\,16}}}-3,\ \ \text{and so on.}
+\]
+So, $A(4,n)$ is a tower of $n+3$ twos with a $-3$ at the end.
+
+For $m=5$ we have
+\[
+A(5,0)=A(4,1)=2^{\,16}-3,\qquad A(5,n+1)=A\bigl(4,\,A(5,n)\bigr),
+\]
+so each step takes the previous value $x=A(5,n)$ and replaces it by
+\[
+A(5,n+1)=2^{\,2^{\,\cdot^{\,\cdot^{\,2^{\,x+3}}}}}-3,
+\]
+which is, a power tower of twos whose height is $x+3$, then subtract $3$.
+
+
+% Q6
+\item I couldn't really make much progress with this problem.
+
+\begin{enumerate}
+\item Pick an edge $e$ joining vertices $u$ and $v$.
+If we remove $e$, we get a new graph $G\setminus e$.  
+If we merge the two vertices together, we get another graph $G/e$.  
+I think the idea is that we somehow compare how many colorings there are in each case...  
+Maybe something like $C_G(n)$ equals one of them minus the other?  
+I’m not totally sure why though, since I don’t fully see how the colorings correspond.
+
+\item 
+\item If there are no edges, then we can just pick any color for each vertex, so that part is easy.  
+But once there are edges, I think we’re supposed to use the idea from the first part somehow.  
+Maybe it has to do with removing an edge or something like that.  
+I’m not exactly sure how to set that up though, and I got stuck trying to see how that would show it’s a polynomial.
+
+\item  
+If there are no edges, $C_G(n)=n^v$, so that part is easy.  
+When there are edges, I think we again use induction, but I don’t know how to show that removing or merging edges keeps the degree the same.  
+I got stuck trying to see why the degree would always be $v$.
+
+\item 
+We’re supposed to write 
+\[
+C_G(n)=a_k n^k+a_{k-1}n^{k-1}+\cdots+a_0,
+\]
+but I’m not sure how to show the signs change $+,-,+,-,$ and so on.  
+Maybe it has to do with the subtraction in the formula from part (a),  
+but I don’t know how to make that argument work. I got stuck here.
+\end{enumerate}
+
+
 \end{enumerate}
 \end{document}
