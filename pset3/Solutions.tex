@@ -1,0 +1,143 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\begin{document}
+\begin{enumerate}
+    % Q1
+    \item We can prove this by considering cases when $n$ is a perfect square and when it's not.
+    \\ Case 1: $n$ is a perfect square:
+        \\Then, by definition: $n = k^2$, 
+    for some integer $k$, where k is the largest possible integer factor of $n$,
+    but taken the square root of. This implies $\sqrt{n} = k$, which proves that 
+    $n$ has a prime factor equal to $\sqrt{n}$. 
+    \\ Case 2: $n$ is not a perfect square:
+    First, consider integers $i$ and $j$ where $ij = n$ and where $i$ is the 
+    largest possible integer factor of $n$, and $j$ is the smallest, so 
+    $i\geq j \geq 2$. Now, we falsely assume that $i^2 > n$. Then, 
+    \begin{align*}
+        n = ij \geq 2i > i^2,
+    \end{align*}
+    which is a contradiction, because for any positive integer, $i$, $i^2$ is 
+    greater than $2i$. This implies that our previous assumption that $i^2 > n$ 
+    must be false, thus, there exists at least 1 prime factor less than or 
+    equal to $\sqrt{n}$. \hfill $\blacksquare$
+    % Q2
+    \item First, we assume that there are finite many primes that can be 
+    written in the form $6n+5$, meaning they can be represented as a finite 
+    list, say, $p_1,p_2,\ldots,p_k$. Now, consider the number $M = 6(p_1,p_2,\ldots,p_k)
+    + 5$. We can take the cases where $M$ is prime and not prime. 
+    \\ Case 1: $M$ is prime: 
+    \\ We have just created a prime, $M$, which is greater 
+    than $p_1,p_2,\ldots,p_k$, meaning it cannot be in the same list, which 
+    contradicts or original assumption that there were finite primes in the form 
+    $6n+5$.
+    \\ Case 2: $M$ is not prime: 
+    \\ Consider $M = 6p_1p_2\cdots p_k -1$, which is also in the form $6n+5$. Let 
+    $q$ be a prime factor where $q \mid M$. But this would mean that $q$ has 
+    to divide $p_1p_2\cdots p_k$ as well, since $q$ is on that list, which is not 
+    possible since $M$ and $p_1p_2 \cdots p_k$ are consecutive integers. 
+    \\ So both cases have led to a contradiction, hence, our original assumption
+    that there are a finite amount of primes in the form $6n+5$, must have been 
+    false, hence, there are infinite prime in the form $6n+5$.\hfill $\blacksquare$
+    % Q3
+    \item Since $n$ is composite, then there exists integers, $c,d$, such that 
+    $1<c<n$ and $1<d<n$ where $n = cd$, $c \nmid n$ and $d \nmid n$. If 
+    $a = c, b = d$, then $n = cd$. Therefore, there exists integers, $a,b$, 
+    such that neither one is a multiple of $n$, but their product is a multiple 
+    of $n$.
+    % Q4
+    \item First, we assume that none of the $a_i$ is a factor of $p$, which implies 
+    that their product can't include $p$ either, which contradicts that $p \mid a_1,\ldots a_k$.
+    Therefore, at least one of $a_i$ is a multiple of $p$
+    % Q5
+    \item We claim that $ax + by + cz = 1$ has solutions if and only if 
+    \[\gcd(\gcd(a,b),c) = 1.\] Let $d = \gcd(a,b)$, so therefore there exists 
+    an integer $d$ such that $a = da'$ and $b = da'$, for some integers $a'$ 
+    and $b'$. Substituting into 
+    $ax + by + cz = 1$ gives 
+    \begin{align*}
+        ax + by + cz &= 1\\
+        da'x + db'y + cz &= 1\\
+        d(a'x + b'y) + cz &= 1.
+    \end{align*}
+    Now, notice that if $c$ is a multiple of $d$, then the equation cannot equal 
+    1 since we would have $d(a'x + b'y + c'z) = 1$, for some integer $c'$, which 
+    cannot equal 1, hence, $\gcd(d,c) = 1$, or $\gcd(\gcd(a,b),c) = 1$. \hfill $\blacksquare$
+    % Q6
+    \item Dividing $5x + 8y = 21$ by 5 and taking the remainder gives $y = 2 + 5k$, 
+    for some integer $k$. Substituting this into the original equation for $y$ gives 
+    \begin{align*}
+        5x+8(2+5k) &= 21 \\
+        5x + 16 + 40k &= 21 \\
+        5x &= 5 - 40k \\
+        x &= 1- 8k,
+    \end{align*}
+    So the solutions to $5x + 8y = 21$ are $(x,y) = (1-8k, 2 +5k)$
+    % Q7
+    \item Note that since $a_1b_2$ and $a_2b_1$ are consecutive numbers, then 
+    \[\gcd(a_1b_2, a_2b_1) = 1\] which implies $a_1$ and $b_2$ shares no factors with 
+    $a_2$ or $b_1$. Now, we falsely assume that $\frac{a_1 + a_2}{b_1+b_2}$ is not 
+    in its lowest terms, which implies that the numerator and denominator share 
+    some common factor, $d$. So we can write $a_1 + a_2 = d(a'_1 + a'_2)$ and 
+    similarily, $b_1 + b_2 = d(b'_1 + b'_2)$. But we know that $(a_1$ and $a_2)$ and 
+    $(b_1 $ and $b_2)$ share no common factors, our assumption that $\frac{a_1+a_2}{b_1+b_2}$
+    wasn't in its lowest terms must be false. Therefore, $\frac{a_1+a_2}{b_1+b_2}$ is in its 
+    lowest terms.
+    % Q8
+    \item Let $f(x) = a_kx^k + a_{k-1}x^{k-1} + \cdots  + a_0$. Then, 
+    $f(n) = a_kn^k + a_{k-1}n^{k-1} + \cdots  + a_0$. Now, consider the integer, 
+    $(f(n + f(n)))^e$. Expanding using the binomial expansion formula gives 
+    \begin{align*}
+        (n + f(n))^m &= \sum_{j=0}^{m} {m \choose j}n^{m-j}(f(n))^j \\
+        &= {m\choose0} n^m + {m\choose1}n^{m-1}(f(n))^1 + \cdots + {m\choose{m}}(f(n))^m
+    \end{align*}
+    and dividing this expression by $f(n)$ and taking the remainder gives 
+    \begin{align*}
+        (n+f(n))^m = n^m + kf(n),
+    \end{align*}
+    for some integer $k$. Next, consider 
+    \[f(n + f(n)) = a_k(n+f(n))^k + a_{k-1}(n+f(n))^{k-1} + \cdots  + a_0.\]
+    Since we know that $(n+f(n))^m = n^m + kf(n)$, we have 
+    \[f(n+f(n)) = a_kn^k + a_{k-1}n^{k-1} + \cdots a_0  = f(n),\] so 
+    $f(n+f(n)) = kf(n)$. Now, we need to show that $k \neq -1,0,1$ or else 
+    $f(n+f(n))$ wouldn't be composite: Suppose 
+    \[f(n+f(n)) = -f(n) \text{ or } f(n+f(n)) = 0 \text{ or } f(n+f(n)) = f(n)\].
+    Notice that for large $n$, none of these can be true because of how polynomials 
+    ``grow,'' meaning that for large $n$, $|f(n+f(n))| > 1$ and so $k >1$. Therefore there exists 
+    some integer $n$ such that $|f(n)|$ is composite. 
+    % Q9
+    \item
+    \begin{enumerate}
+        \item We can use induction to solve this problem. First, we try the base 
+        case, $\gcd(F_0, F_1) = 1$. Now for the inductive step, we assume that it's 
+        true for $n$, and that we need to show it's true for $n+1$ (that $\gcd(F_{n+1},
+        F_{n+2}) = 1),$ so 
+        \begin{align*}
+            \gcd(F_{n+1}, F_{n+2}) = \gcd(F_{n+1}, F_{n+1} + F_{n}) = \gcd(F_{n+1},F_n) = 1
+        \end{align*}
+        Therefore, for all $n \geq 1$, $\gcd(F_n, F_{n+1}) = 1$. 
+        \item I didn't really know what to do with this problem. I tried to come 
+        up with a relationship between the $n$th fibonacci number and $n$ and then 
+        prove using induction but I couldn't really get anywhere.
+    \end{enumerate} 
+    % Q10
+    \item Let $M = 2^n -1$. First, assume that $n$ is composite, so it can be represented as the 
+    product of two integers, $a,b \geq 2$, so $M = 2^{ab}-1$. Letting $d = 2^{ab} -1 \iff d + 1 = 2^{ab}$, for some integer $d > 1$ 
+    we have \[2^{ab}-1 = (2^a)^b-1 = (d+1)^b -1\] and using the binomial expansion 
+    gives \begin{align*}
+        (d+1)^b -1 &= d^b + {b \choose1}d^{b-1} + \ldots + {b \choose b-1}d+ 1 -1\\
+        &= d^b + {b \choose1}d^{b-1} + \ldots + {b \choose b-1}d,
+    \end{align*}
+    which gives $d \mid 2^{ab}-1$, so $2^{ab} -1$ is composite, which is a contradiction. 
+    Therefore, if $2^n - 1$ is prime, then $n$ must be prime.  
+    % Q11
+    \item Let $n = 2^p \cdot q$, where q is some odd positive integer with all of its 
+    factors of 2 ``factored out'' so that $2^p \cdot q$ is not a power of 2. Letting $d = 2^{2^p}$,
+    we have \begin{align*}
+        2^{2^p \cdot q} +1  = d^q +1 = (d+1)(d^{q-1} - d^{q-2} + \ldots +1),
+    \end{align*}
+    with $d > 1$, so $(d+1) \mid 2^{2^p \cdot q }$, so $2^{2^p \cdot q }$ is composite, 
+    which is a contradiction. Therefore, if $2^{2^n} +1$ is prime, then n must 
+    be a power of 2.
+\end{enumerate}
+\end{document}
