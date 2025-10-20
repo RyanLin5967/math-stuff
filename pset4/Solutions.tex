@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath, amssymb}
+\usepackage{amsthm}
+\begin{document}
+\begin{enumerate}
+    % Q1
+    \item Notice that if two points' midpoint will have integer coordinates, then 
+    they must have the same even/odd ``profile'' for example (even, odd, even) and
+    (even, odd, even). This is because the formula for the mid point is $\frac{a_1 + a_2}{2}
+    $ where $a_1$ and $a_2$ are each point's respective axis, so we need $a_1 + a_2$ 
+    to be a multiple of 2. Since for each point, there are $2\cdot2\cdot2 = 8$ 
+    possible profiles and we have 9 points, by the Pigeonhole Principle, there 
+    must be two points with the same profile. 
+    % Q2
+    \item Let a hole be 2 consecutive numbers, so the first hole will have 1 and 2, 
+    the next will have 3 and 4, and so on. Notice that if there are two numbers in 
+    the same hole, then the set, $S$, will have two consecutive integers. Since 
+    we have 50 holes and 51 numbers, then there must be at least one hole with two 
+    numbers. Therefore, $S$ must contain two consecutive integers.
+    % Q3
+    \item First, notice that if a knight is on a black square, it will attack a 
+    white square, and vice-versa. So with this, we can deduce that the maximum 
+    knights one can put on a chessboard is 32 with all of the knights being on 
+    the white or black squares. And note that it cannot be greater than 32 since 
+    any extra knights being put will be on a different square then all the other 
+    knights, so it will be attacked. For bishops, since they move and attack 
+    diagonally, we can deduce that we will need to occupy as many diagonals as 
+    possible to maximize the amount of bishops. Now, consider the arrangement of 
+    bishops with 8 on a backrank and 6 on the opposite one where the bishops are 
+    on the B-G positions (skipping corners). Notice that all diagonals are covered, 
+    hence why there cannot be more $\geq$ 15. Therefore, the most bishops that can 
+    be placed on a chessboard without attacking eachother is 14.
+    % Q4
+    \item First, note that the total number of different subsets for $S$ is $2^{10}-1 = 1023$
+    and that the max sum or the total different sum values for $T$ or $U$ is the sum 
+    of integers between 92 and 100, inclusive (since $T$ or $U$ are nonempty), which 
+    sums to 864. Now, since at most there are at most 864 different sums for $T$ and $U$, 
+    and 1023 different subsets for $S$, then there must be two sets with the same sum.
+    % Q5
+    \item First, consider the sequence of numbers 
+    \[
+    a_1 = 1, \quad a_2 = 11, \quad a_3 = 111, \quad \ldots, \quad a_k = \underbrace{11\ldots1}_{k \text{ ones}}.
+    \]
+    Each \(a_k\) consists only of the digit \(1\) in its decimal expansion. We take the first \(n\) of them: \(a_1, a_2, \ldots, a_n.\)
+    When each of these numbers is divided by \(n\), we get a remainder between \(0\) and \(n-1\). Since there are \(n\) such numbers and only \(n\) possible remainders, two things can happen:
+    If one of the numbers divides evenly by \(n\), then that number itself is a multiple of \(n\) consisting only of the digit \(1\), and we are done. 
+    Otherwise, no number divides evenly, so the remainders are all nonzero. Then, because there are \(n\) numbers but only \(n-1\) possible nonzero remainders, by the Pigeonhole principle, two of the numbers must leave the same remainder when divided by \(n\). 
+    Let those two numbers be \(a_i\) and \(a_j\), where \(j > i\). 
+    Since both give the same remainder when dividing by \(n\), their difference is exactly divisible by \(n\). 
+    So we have 
+    \[
+    a_j = \underbrace{11\ldots1}_{j \text{ ones}} \quad \text{and} \quad a_i = \underbrace{11\ldots1}_{i \text{ ones}},
+    \]
+    and 
+    \[
+    a_j - a_i = \underbrace{11\ldots1}_{j-i \text{ ones}}\underbrace{00\ldots0}_{i \text{ zeros}}.
+    \]
+    This number has only the digits \(0\) and \(1\), and because it is the difference of two numbers that leave the same remainder when dividing by \(n\), it must be divisible by \(n\). 
+    Therefore, in all cases, we can find a positive multiple of \(n\) whose decimal expansion contains only the digits \(0\) and \(1.\) 
+    % Q6
+    \item If there is someone with 0 friends, then the possible number of friends one 
+    can have in that set goes from $0$ to $n-2$, which has $n-1$ possibilities. 
+    If there is one person that's friends with everyone, then the possible 
+    number of friends that one can have in that set go from $1$ to $n-1$, inclusive, so also $n-1$ possible 
+    friends, and if we continue, then there will less possible friends. So since 
+    there are $n$ people, but at most, only $n-1$ possibilities for number of friends, then,
+    by the Pigeonhole Principle, there exists two people with the same number of 
+    friends.
+    % Q7
+    \item If we make the line that seperates the hemispheres ``hit'' two points, 
+    then where will the other 3 points be? If they are all on one side of the hemisphere, 
+    then there are 5 points on a side, so we're done. If there are 2 points on a hemisphere, 
+    then we have 4 points on a hemisphere, so for all cases, in a sphere with 5 points, 
+    there must be 4 in a hemisphere.
+    % Q8
+    \item I couldn't solve this problem. I figured out that you can rewrite the 
+    product as \[\prod_{i=1}^n\prod_{j=0}^{i-1}(a_j-a_i)\] and felt like the idea 
+    is to show using the pigeonhole principle that the product must ``gain'' factors 
+    of $n$! as $n$ grows but I don't really know. 
+    % Q9
+    \item 
+    \begin{enumerate}
+    \item Consider primes consecutive primes, $p_n$ and $p_{n+1}$. As $n$ approaches 
+    infinity, so does the prime gap, so if we pick the numbers between these primes for large enough $n$, 
+    there are $k$ consecutive integers that are all composite.
+    \item I also couldn't solve this problem. It probably has to be shown using 
+    the Dirichlet Approximation Theorem, so maybe something that starts with showing 
+    that there exists infinite rational numbers $\frac{s}{t}$ in their lowest terms 
+    such that
+    \[\left| \sum_{p \text{ prime}}\frac{1}{2^p}-\frac{s}{t} \right| < \frac{1}{s^2},\]
+    but I didn't really know how to proceed.
+    \end{enumerate}
+\end{enumerate}
+\end{document}
